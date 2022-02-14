@@ -1,0 +1,93 @@
+body{
+  background-color: #c9cace;
+}
+
+.accordion{
+    width: 700px;
+    padding: 0;
+    margin: 0 auto;
+    background-color: #fcfcff;
+  }
+
+.toggle-box {
+    /* по умаолчанию скрыт */
+    display: none;
+  }
+  /* формируем внешний вид панелей аккордеона */
+.toggle-box + label { 
+    background: #6c6e74;
+    background: -webkit-linear-gradient(left,  #46b428 0%,#14556e 100%);
+    color: #fff9f9;
+    cursor: pointer;
+    display: block;
+    font: normal 14px Helvetica, Arial, sans-serif;
+    line-height: 21px;
+    padding: 8px 22px; 
+    margin-bottom: 1px;
+    border-radius: 5px;
+  }
+label a, a:hover{color: rgb(207, 207, 207);}
+    
+  /* формируем внешний вид панелей при наведении */
+  .toggle-box + label:hover{opacity: 0.9;} 
+   
+  /* формируем внешний вид панелей при нажатии на них */
+.toggle-box + label:active{
+    background: #14556e;
+    background: -webkit-linear-gradient(top,  #224e16 0%, #164732 11%, #013031 84%, #083041 100%);
+    
+  }
+   
+  /* содержание блоков скрыто */
+.toggle-box + label + div {
+    display: none;
+  }
+   
+  /* при обработке флажка (checkbox) показываем блок с содержанием */
+.toggle-box:checked + label + div {
+    display: block;
+  }
+
+.box, .box2, .box3 {
+    height: 70vh;
+}
+
+.box2{
+  text-align: center;
+  padding-top: 50px;
+  } 
+  
+.product{
+    width: 30%;
+    border-radius: 10px;
+  }
+
+.box3{
+    text-align: center;
+  }
+h2.box3-header, h3.box3-header {
+    font: bold 20px Helvetica, Arial, sans-serif;
+    color: #14556e;
+    padding-top: 8px;
+    margin: 0;
+  }
+
+.img-box3 {
+    width: 30%;
+    overflow: hidden;
+    padding-top: 50px;
+    border-radius: 50%;
+  }
+
+/*данный блок отвечает за изменения параметров отображения элементов при смене разрешения экрана */
+  @media (max-width: 480px) {
+    .accordion {
+        width: 100%;
+    }
+    .img-box3 {
+      width: 50%;   
+    }
+    h2.box3-header, h3.box3-header {
+      font: bold 15px Helvetica, Arial, sans-serif;
+     }
+}
